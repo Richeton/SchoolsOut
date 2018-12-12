@@ -13,27 +13,21 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Source Files\core">
-      <UniqueIdentifier>{461ef74c-e9d2-42b7-bf5e-096ae529dbf3}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\core">
-      <UniqueIdentifier>{e7c183e0-8fb5-452a-8ca0-c1068fa68055}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\School%27sOut\School%27sOut\entity.h">
+    <ClInclude Include="entity.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\School%27sOut\School%27sOut\image.h">
+    <ClInclude Include="image.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\School%27sOut\School%27sOut\input.h">
+    <ClInclude Include="input.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\School%27sOut\School%27sOut\projectile.h">
+    <ClInclude Include="projectile.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\School%27sOut\School%27sOut\enemy.h">
+    <ClInclude Include="enemy.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="player.h">
@@ -48,45 +42,45 @@
     <ClInclude Include="gui.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\School%27sOut\School%27sOut\combatState.h">
+    <ClInclude Include="combatState.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\School%27sOut\School%27sOut\searchingState.h">
+    <ClInclude Include="searchingState.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\School%27sOut\School%27sOut\state.h">
+    <ClInclude Include="state.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\School%27sOut\School%27sOut\obstacle.h">
+    <ClInclude Include="obstacle.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\School%27sOut\School%27sOut\constants.h">
-      <Filter>Header Files\core</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\School%27sOut\School%27sOut\game.h">
-      <Filter>Header Files\core</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\School%27sOut\School%27sOut\gameError.h">
-      <Filter>Header Files\core</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\School%27sOut\School%27sOut\graphics.h">
-      <Filter>Header Files\core</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\School%27sOut\School%27sOut\textureManager.h">
-      <Filter>Header Files\core</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\School%27sOut\School%27sOut\spawner.h">
+    <ClInclude Include="spawner.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\School%27sOut\School%27sOut\collision.h">
+    <ClInclude Include="collision.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\School%27sOut\School%27sOut\collidedState.h">
+    <ClInclude Include="collidedState.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="constants.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="game.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="graphics.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gameError.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="textureManager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\School%27sOut\School%27sOut\entity.cpp">
+    <ClCompile Include="entity.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="schoolsOut.cpp">
@@ -95,55 +89,55 @@
     <ClCompile Include="player.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\School%27sOut\School%27sOut\entityCollection.cpp">
+    <ClCompile Include="entityCollection.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\School%27sOut\School%27sOut\enemy.cpp">
+    <ClCompile Include="enemy.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="gui.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\School%27sOut\School%27sOut\combatState.cpp">
+    <ClCompile Include="combatState.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\School%27sOut\School%27sOut\searchingState.cpp">
+    <ClCompile Include="searchingState.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\School%27sOut\School%27sOut\state.cpp">
+    <ClCompile Include="state.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\School%27sOut\School%27sOut\obstacle.cpp">
+    <ClCompile Include="obstacle.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\School%27sOut\School%27sOut\game.cpp">
-      <Filter>Source Files\core</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\School%27sOut\School%27sOut\graphics.cpp">
-      <Filter>Source Files\core</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\School%27sOut\School%27sOut\image.cpp">
-      <Filter>Source Files\core</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\School%27sOut\School%27sOut\input.cpp">
-      <Filter>Source Files\core</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\School%27sOut\School%27sOut\textureManager.cpp">
-      <Filter>Source Files\core</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\School%27sOut\School%27sOut\winmain.cpp">
-      <Filter>Source Files\core</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\School%27sOut\School%27sOut\spawner.cpp">
+    <ClCompile Include="spawner.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\School%27sOut\School%27sOut\collision.cpp">
+    <ClCompile Include="collision.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\School%27sOut\School%27sOut\projectile.cpp">
+    <ClCompile Include="projectile.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\School%27sOut\School%27sOut\collidedState.cpp">
+    <ClCompile Include="collidedState.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="game.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="graphics.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="image.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="input.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="textureManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="winmain.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
