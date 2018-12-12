@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\System">
+      <UniqueIdentifier>{126c6464-17e0-441b-a633-52705dc81f4c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Class">
+      <UniqueIdentifier>{6e7515e3-0b2c-4d05-b702-a9352422a4b0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\System">
+      <UniqueIdentifier>{8d69b094-b988-43f8-b265-c5c708b9a4e9}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="spacewar.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\%40MyStuff\Year3\GPP\Project1\Project1\constants.h">
+      <Filter>Header Files\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\%40MyStuff\Year3\GPP\Project1\Project1\entity.h">
+      <Filter>Header Files\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\%40MyStuff\Year3\GPP\Project1\Project1\game.h">
+      <Filter>Header Files\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\%40MyStuff\Year3\GPP\Project1\Project1\gameError.h">
+      <Filter>Header Files\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\%40MyStuff\Year3\GPP\Project1\Project1\graphics.h">
+      <Filter>Header Files\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\%40MyStuff\Year3\GPP\Project1\Project1\image.h">
+      <Filter>Header Files\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\%40MyStuff\Year3\GPP\Project1\Project1\input.h">
+      <Filter>Header Files\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\%40MyStuff\Year3\GPP\Project1\Project1\textureManager.h">
+      <Filter>Header Files\System</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\..\%40MyStuff\Year3\GPP\Project1\Project1\spacewar.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\%40MyStuff\Year3\GPP\Project1\Project1\winmain.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\%40MyStuff\Year3\GPP\Project1\Project1\entity.cpp">
+      <Filter>Source Files\System</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\%40MyStuff\Year3\GPP\Project1\Project1\game.cpp">
+      <Filter>Source Files\System</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\%40MyStuff\Year3\GPP\Project1\Project1\graphics.cpp">
+      <Filter>Source Files\System</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\%40MyStuff\Year3\GPP\Project1\Project1\image.cpp">
+      <Filter>Source Files\System</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\%40MyStuff\Year3\GPP\Project1\Project1\input.cpp">
+      <Filter>Source Files\System</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\%40MyStuff\Year3\GPP\Project1\Project1\textureManager.cpp">
+      <Filter>Source Files\System</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
