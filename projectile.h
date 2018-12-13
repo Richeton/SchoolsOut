@@ -13,16 +13,13 @@ namespace projectileNS
 {
 	const int	WIDTH = 32;							// image width
 	const int	HEIGHT = 32;						// image height
-	// const int	X = GAME_WIDTH / 2;				// location on screen
-	// const int	Y = GAME_HEIGHT / 2;
 	const float SPEED = 100;						// 100 pixels per second
-	const int   TEXTURE_COLS = 8;
+	const int   TEXTURE_COLS = 1;
 }
 
 class Projectile : public Entity
 {
 private:
-
 	int quantity;	// number of projectile
 	int damage;		// damage of the projectile
 	float speed;	// projectile speed (pixels traveled per second)

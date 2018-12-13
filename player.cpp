@@ -9,6 +9,7 @@ Player::Player()
 {
 	collisionType = entityNS::COLLISION_TYPE::BOX;
 	entityType = entityNS::ENTITY_TYPE::PLAYER;
+	health = 3;
 }
 
 Player::Player(Input &input)
@@ -45,7 +46,8 @@ void Player::update(float frameTime)
 		if (getY() <= (GAME_BOUNDARY_YSTART))
 			setY((float)GAME_BOUNDARY_YSTART);
 
-		setCurrentFrame(0);
+		setCurrentFrame(12);
+		setFrames(12, 12);
 	}
 
 	// This is for the 'S' key
@@ -64,6 +66,7 @@ void Player::update(float frameTime)
 
 		// Set the sprite so it faces the correct direction
 		setCurrentFrame(0);
+		setFrames(0, 0);
 	}
 
 	// This is for the 'A' key
@@ -77,7 +80,8 @@ void Player::update(float frameTime)
 		if (getX() <= GAME_BOUNDARY_XSTART)
 			setX((float)GAME_BOUNDARY_XSTART);
 
-		setCurrentFrame(7);
+		setCurrentFrame(4);
+		setFrames(4, 4);
 
 	}
 
@@ -94,7 +98,8 @@ void Player::update(float frameTime)
 		// ... of the sprite
 		if (getX() >= GAME_BOUNDARY_XEND - getWidth())
 			setX((float)GAME_BOUNDARY_XEND - getWidth());
-		setCurrentFrame(11);
+		setCurrentFrame(8);
+		setFrames(8, 8);
 
 	}
 

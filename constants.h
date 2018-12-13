@@ -53,8 +53,10 @@ const float MAX_FRAME_TIME = 1.0f / MIN_FRAME_RATE; // maximum time used in calc
 
 													// graphic images
 const char STAGE_BACKGROUND[] = "pictures\\classroom.png";
-const char TEXTURES_IMAGE[] = "pictures\\allsprites.png";
-
+const char PLAYER_IMAGE[] = "pictures\\playersprites.png";
+const char ENEMY_IMAGE[] = "pictures\\enemysprites.png";
+const char OBSTACLE_IMAGE[] = "pictures\\obstaclesprites.png";
+const char BULLET_IMAGE[] = "pictures\\bulletsprites.png";
 
 // key mappings
 // In this game simple constants are used for key mappings. If variables were used

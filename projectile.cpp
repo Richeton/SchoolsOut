@@ -9,6 +9,7 @@ Projectile::Projectile()
 {
 	collisionType = entityNS::COLLISION_TYPE::BOX;
 	entityType = entityNS::ENTITY_TYPE::PROJECTILE;
+	setScale(0.4);
 }
 
 Projectile::~Projectile()

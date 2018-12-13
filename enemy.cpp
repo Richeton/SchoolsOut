@@ -8,7 +8,6 @@
 
 Enemy::Enemy()
 {
-	setCurrentFrame(enemyNS::ENEMY_DEFAULT_FRAME);
 	collisionType = entityNS::COLLISION_TYPE::BOX;
 	entityType = entityNS::ENTITY_TYPE::RUGBYPLAYERS;
 }

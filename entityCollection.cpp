@@ -39,16 +39,16 @@ bool EntityCollection::add(Projectile* projectile)
 bool EntityCollection::remove(Entity* en)
 {
 	// create iterator here
-	int i = -1;
+	int i = 0;
 	for (const auto entity : entityCollection)
 	{
-		i++;
 		// put iterator here
 		if (en == entity)
 		{
 			entityCollection.erase(entityCollection.begin() + i);
 			return true;
 		}
+		i++;
 	}
 
 	return false; // entity not found
@@ -60,13 +60,13 @@ bool EntityCollection::remove(Enemy* enemy)
 	int i = 0;
 	for (const auto en : enemyCollection)
 	{
-		i++;
 		// put iterator here
 		if (&en == &enemy)
 		{
 			enemyCollection.erase(enemyCollection.begin() + i);
 			return true;
 		}
+		i++;
 	}
 
 	return false; // entity not found
@@ -149,10 +149,6 @@ bool EntityCollection::update(float frameTime)
 	{
 		entity->update(frameTime);
 	}
-	//for (const auto projectile : projCollection)
-	//{
-	//	projectile->update(frameTime);
-	//}
 	return true;
 }
 
@@ -185,19 +181,9 @@ bool EntityCollection::collision()
 			{
 				// Action after Collision
 				(*eFront)->collidedWith(**eBack, collVector, *this);
+				
 			}
 		}
-		//// Bullet Collision
-		//std::vector<Projectile*>::iterator pFront = projCollection.begin();
-		//while (pFront != projCollection.end())
-		//{
-		//	if ((*eFront)->collidesWith((**pFront), collVector))
-		//	{
-		//		// Action after Projectile Collision (with other entity)
-		//		(*eFront)->collidedWith(**pFront, collVector, *this);
-		//	}
-		//	pFront++;
-		//}
 		eFront++;
 	}
 	return true;
@@ -216,34 +202,3 @@ bool EntityCollection::render()
 	}*/
 	return true;
 }
-
-//void EntityCollection::enemyPlayerCollision(Player* player, float frameTime)
-//{
-	/*
-	D3DXVECTOR2 colVect;
-
-	for (const auto enemy : entityCollection)
-	{
-
-		if (enemy->collidesWith(*player, colVect))
-		{
-			if (player->getTakenDamage() == false)
-			{
-				player->setHealth(player->getHealth() - 10);
-				player->setTakenDamage(true);
-				player->setInvulnerabilityFrame(3);
-			}
-			else
-			{
-				player->setInvulnerabilityFrame(player->getInvulnerabilityFrame() - frameTime);
-				if (player->getInvulnerabilityFrame() <= 0)
-				{
-					player->setTakenDamage(false);
-				}
-			}
-
-		}
-
-	}	
-	*/
-//}

@@ -33,16 +33,27 @@ void SchoolsOut::initialize(HWND hwnd)
 	time_t t;
 	srand(time(&t));
 
-							// stage texture
+	// stage texture
 	if (!stageTexture.initialize(graphics, STAGE_BACKGROUND))
 		throw(GameError(gameErrorNS::FATAL_ERROR,
 			"Error initializing stage texture"));
 
 	// main game textures
-	if (!gameTexture.initialize(graphics, TEXTURES_IMAGE))
+	if (!playerTexture.initialize(graphics, PLAYER_IMAGE))
 		throw(GameError(gameErrorNS::FATAL_ERROR,
-			"Error initializing game texture"));
+			"Error initializing player texture"));
 
+	if (!enemyTexture.initialize(graphics, ENEMY_IMAGE))
+		throw(GameError(gameErrorNS::FATAL_ERROR,
+			"Error initializing enemy texture"));
+
+	if (!obstacleTexture.initialize(graphics, OBSTACLE_IMAGE))
+		throw(GameError(gameErrorNS::FATAL_ERROR,
+			"Error initializing obstacle texture"));
+
+	if (!bulletTexture.initialize(graphics, BULLET_IMAGE))
+		throw(GameError(gameErrorNS::FATAL_ERROR,
+			"Error initializing bullet texture"));
 
 	// background
 	if (!background.initialize(graphics, GAME_WIDTH, GAME_HEIGHT, 0, &stageTexture))
@@ -51,7 +62,7 @@ void SchoolsOut::initialize(HWND hwnd)
 
 
 	// player
-	if (!player->initialize(this, playerNS::WIDTH, playerNS::HEIGHT, playerNS::TEXTURE_COLS, &gameTexture))
+	if (!player->initialize(this, playerNS::WIDTH, playerNS::HEIGHT, playerNS::TEXTURE_COLS, &playerTexture))
 		throw(GameError(gameErrorNS::FATAL_ERROR,
 			"Error initializing player"));
 
@@ -87,15 +98,23 @@ void SchoolsOut::update()
 
 			// Initialize the projectile
 			if (!p->initialize(this, projectileNS::WIDTH, projectileNS::HEIGHT,
-				projectileNS::TEXTURE_COLS, &gameTexture))
+				projectileNS::TEXTURE_COLS, &bulletTexture))
 				throw(GameError(gameErrorNS::FATAL_ERROR,
 					"Error initializing projectiles"));
 
+			p->setScale(0.4);
+			p->setDegrees(90);
 			// '0' for x because it only moves in the y-axis
 			// '-' because it moves ^^^
 			p->setVelocity(D3DXVECTOR2(0, -projectileNS::SPEED));
 			nextShootTime = 0;
 		}
+
+		player->setLoop(false);
+		player->setCurrentFrame(13);
+		player->setFrames(13, 15);
+		player->setFrameDelay(0.1);
+
 	}
 
 
@@ -113,15 +132,23 @@ void SchoolsOut::update()
 
 			// Initialize the projectile
 			if (!p->initialize(this, projectileNS::WIDTH, projectileNS::HEIGHT,
-				projectileNS::TEXTURE_COLS, &gameTexture))
+				projectileNS::TEXTURE_COLS, &bulletTexture))
 				throw(GameError(gameErrorNS::FATAL_ERROR,
 					"Error initializing projectiles"));
+
+			p->setScale(0.4);
+			p->setDegrees(270);
 
 			// '0' for x because it only moves in the y-axis
 			// '+' because it moves vvv
 			p->setVelocity(D3DXVECTOR2(0, projectileNS::SPEED));
 			nextShootTime = 0;
 		}
+
+		player->setLoop(false);
+		player->setCurrentFrame(1);
+		player->setFrames(1, 3);
+		player->setFrameDelay(0.1);
 	}
 
 	// This is for the 'Left' arrow key
@@ -138,15 +165,23 @@ void SchoolsOut::update()
 
 			// Initialize the projectile
 			if (!p->initialize(this, projectileNS::WIDTH, projectileNS::HEIGHT,
-				projectileNS::TEXTURE_COLS, &gameTexture))
+				projectileNS::TEXTURE_COLS, &bulletTexture))
 				throw(GameError(gameErrorNS::FATAL_ERROR,
 					"Error initializing projectiles"));
+
+			p->setScale(0.4);
+			p->setDegrees(0);
 
 			// '0' for y because it only moves in the x-axis
 			// '-' because it moves <---
 			p->setVelocity(D3DXVECTOR2(-projectileNS::SPEED, 0));
 			nextShootTime = 0;
 		}
+
+		player->setLoop(false);
+		player->setCurrentFrame(5);
+		player->setFrames(5, 7);
+		player->setFrameDelay(0.1);
 	}
 
 	// This is for the 'Right' arrow key
@@ -163,25 +198,40 @@ void SchoolsOut::update()
 
 			// Initialize the projectile
 			if (!p->initialize(this, projectileNS::WIDTH, projectileNS::HEIGHT,
-				projectileNS::TEXTURE_COLS, &gameTexture))
+				projectileNS::TEXTURE_COLS, &bulletTexture))
 				throw(GameError(gameErrorNS::FATAL_ERROR,
 					"Error initializing projectiles"));
+
+			p->setScale(0.4);
+			p->setDegrees(180);
 
 			// '0' for y because it only moves in the x-axis
 			// '+' because it moves --->
 			p->setVelocity(D3DXVECTOR2(projectileNS::SPEED, 0));
 			nextShootTime = 0;
 		}
+
+		player->setLoop(false);
+		player->setCurrentFrame(9);
+		player->setFrames(9, 11);
+		player->setFrameDelay(0.1);
 	}
 
 	nextShootTime += frameTime;
 
 	//-------------------------------------------------------------
-	spawner.enemySpawn(&entityCollection, player, *this, gameTexture, frameTime);
-	spawner.obstacleSpawn(&entityCollection, player, *this, gameTexture, frameTime);
+	spawner.enemySpawn(&entityCollection, player, *this, enemyTexture, frameTime);
+	spawner.obstacleSpawn(&entityCollection, player, *this, obstacleTexture, frameTime);
 	entityCollection.update(frameTime);
 	guiwin->update(*player);
 
+	// Handling Player Invulnerability
+	player->updateVulnerableTimer(frameTime);
+
+	// Handle when Player health hits 0, change game state to 2 (Game Over)
+	if (player->getHealth() <= 0)
+		game_state = 2;
+	
 }
 
 //=============================================================================
@@ -202,7 +252,6 @@ void SchoolsOut::collisions()
 {
 	D3DXVECTOR2 colVect;
 	entityCollection.collision();
-
 
 }
 

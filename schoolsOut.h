@@ -12,7 +12,6 @@
 #include "enemy.h"
 #include "textureManager.h"
 #include "image.h"
-#include <list>
 #include "enemySpawn.h"
 #include "spawner.h"
 #include "entityCollection.h"
@@ -27,7 +26,11 @@ private:
 
 	// game items
 	TextureManager stageTexture;	// stage texture
-	TextureManager gameTexture;		// game texture
+	TextureManager playerTexture;
+	TextureManager enemyTexture;
+	TextureManager obstacleTexture; 
+	TextureManager bulletTexture;
+
 	Spawner spawner;
 	EntityCollection entityCollection;
 

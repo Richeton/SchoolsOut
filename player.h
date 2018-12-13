@@ -19,13 +19,13 @@ namespace playerNS
 	const int X = GAME_WIDTH / 2 - WIDTH / 2;   // location on screen
 	const int Y = GAME_HEIGHT / 2 - HEIGHT / 2;
 	const float SPEED = 100;                // 100 pixels per second
-	const int   TEXTURE_COLS = 8;           // texture has 8 columns			
+	const int   TEXTURE_COLS = 4;           // texture has 8 columns
 }
 
 class Player : public Entity
 {
 private:
-
+	
 public:
 
 	Player();				//Default Constructor

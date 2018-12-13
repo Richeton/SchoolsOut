@@ -8,10 +8,10 @@
 
 Obstacle::Obstacle()
 {
-	setCurrentFrame(17);
-	setScale(0.5);
 	collisionType = entityNS::COLLISION_TYPE::BOX;
 	entityType = entityNS::ENTITY_TYPE::TABLE;
+	setCurrentFrame(1);
+
 }
 
 Obstacle::~Obstacle()

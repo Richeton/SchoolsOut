@@ -11,17 +11,16 @@
 
 namespace obstacleNS
 {
-	const int WIDTH = 64;                   // image width
-	const int HEIGHT = 64;                  // image height
+	const int WIDTH = 32;                   // image width
+	const int HEIGHT = 32;                  // image height
 
-	const int EDGE_LEFT = -25;
-	const int EDGE_RIGHT = 25;
-	const int EDGE_TOP = -30;
-	const int EDGE_BOTTOM = 30;
+	const int EDGE_LEFT = -12;
+	const int EDGE_RIGHT = 12;
+	const int EDGE_TOP = -15;
+	const int EDGE_BOTTOM = 15;
 
-	const int TEXTURE_COLS = 8;           // texture has 8 columns
+	const int TEXTURE_COLS = 2;           // texture has 8 columns
 
-	const int OBSTACLE_DEFAULT_FRAME = 17;
 			
 	
 }

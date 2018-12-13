@@ -18,8 +18,8 @@ namespace spawnerNS
 
 	const UINT SPAWN_DISTANCE = 150;
 
-	const int ENEMY_CAP = 3;				// only 3 enemies can spawn at any given time
-	const int OBSTACLE_CAP = 3;				// only 3 obstacles can spawn at any given time
+	const int ENEMY_CAP = 10;				// only 3 enemies can spawn at any given time
+	const int OBSTACLE_CAP = 10;				// only 3 obstacles can spawn at any given time
 }
 
 class Spawner
@@ -31,8 +31,8 @@ private:
 public:
 	Spawner();
 	~Spawner();
-	bool enemySpawn(EntityCollection* entityCollection, Player* player, Game& gamePtr, TextureManager& gameTexture, float frameTime);		
-	bool obstacleSpawn(EntityCollection* entityCollection, Player* player, Game& gamePtr, TextureManager& gameTexture, float frameTime);
+	bool enemySpawn(EntityCollection* entityCollection, Player* player, Game& gamePtr, TextureManager& enemyTexture, float frameTime);		
+	bool obstacleSpawn(EntityCollection* entityCollection, Player* player, Game& gamePtr, TextureManager& obstacleTexture, float frameTime);
 	
 };
 

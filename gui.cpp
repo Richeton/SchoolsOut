@@ -21,9 +21,6 @@ GUI_Window::GUI_Window()
 
 	health_Icon.right = GAME_WIDTH / 5;
 	health_Icon.bottom = GAME_HEIGHT / 12;
-
-	healthText = "5/7";
-
 }
 
 GUI_Window::~GUI_Window()

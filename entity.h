@@ -70,6 +70,9 @@ protected:
 	bool projectionsOverlap(Entity &ent);
 	bool collideCornerCircle(VECTOR2 corner, Entity &ent, VECTOR2 &collisionVector);
 
+	bool vulnerable = true;
+	float vulnerableTimer = 0.2f;
+
 public:
 	// Constructor
 	Entity();
@@ -184,6 +187,18 @@ public:
 	State* getAI();
 
 	entityNS::ENTITY_TYPE getEntityType() { return entityType; }
+
+	bool getVulnerable() { return vulnerable; }
+	float getVulnerableTimer() { return vulnerableTimer; }
+	void resetVulnerable() { vulnerableTimer = 2.0F; vulnerable = false; }
+
+	void updateVulnerableTimer(float frameTime) 
+	{
+		vulnerableTimer -= frameTime; 
+		if (vulnerableTimer <= 0)
+			vulnerable = true;
+	}
+
 
 };
 
